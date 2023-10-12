@@ -24,6 +24,110 @@
         <link rel="stylesheet" href="assets/css/default.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        /* Styles for overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the popup content */
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Animation for the popup */
+.popup-content {
+    animation: pop-up 0.5s ease-in-out;
+}
+
+@keyframes pop-up {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Close button style */
+#close-popup {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-popup:hover {
+    background: #e64a19;
+}
+
+/* Styles for left and right halves */
+.left-half, .right-half {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Contact form styles */
+#contact-form {
+    text-align: left;
+}
+
+#contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background: #e64a19;
+}
+@media screen and (max-width: 768px) {
+    .popup-content {
+        flex-direction: column;
+    }
+    .contact-form, .offer {
+        border-radius: 10px;
+    }
+}
+
+
+    </style>
     </head>
     <body>
 
@@ -83,7 +187,7 @@
                                     <h6 data-animation="fadeInUp" data-delay=".2s">Dedicated to helping you achieve healthy, beautiful skin</h6>
                                     <h1 data-animation="fadeInUp" data-delay=".4s">Best Dermatologists in Your City</h1>
                                     <div class="slider-btn">
-                                        <a class="btn black-btn" href="#appoint" data-animation="fadeInUp" data-delay=".6s">Get appointment</a>
+                                        <a class="btn black-btn" href="#contact" data-animation="fadeInUp" data-delay=".6s">Get appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +198,7 @@
                                     <h6 data-animation="fadeInUp" data-delay=".2s">Body Care Clinic Hair Treatments</h6>
                                     <h1 data-animation="fadeInUp" data-delay=".4s">Experience Safe Hair Care with Body Care Clinic</h1>
                                     <div class="slider-btn">
-                                        <a class="btn black-btn" href="#appoint" data-animation="fadeInUp" data-delay=".8s">Get appointment</a>
+                                        <a class="btn black-btn" href="#contact" data-animation="fadeInUp" data-delay=".8s">Get appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -105,9 +209,9 @@
                                     <h6 data-animation="fadeInUp" data-delay=".2s">Body Care Clinic <Body>
                                         
                                     </Body> Treatments</h6>
-                                    <h1 data-animation="fadeInUp" data-delay=".4s">Best Body Care Clinic</h1>
+                                    <h1 data-animation="fadeInUp" data-delay=".4s">Best Body <br>Care Clinic</h1>
                                     <div class="slider-btn">
-                                        <a class="btn black-btn" href="#appoint" data-animation="fadeInUp" data-delay=".8s">Get appointment</a>
+                                        <a class="btn black-btn" href="#contact" data-animation="fadeInUp" data-delay=".8s">Get appointment</a>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +247,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                                 <div class="about-text" data-animation="fadeInUp" data-delay=".6s">
                                     <p>Using the latest techniques and their immense skills, Body Care Clinic team will transform you into a world of indulgence, pampering and deep relaxation, making you look and feel younger.</p>
-                                    <a href="#appoint" class="theme-btn">Book Appointment</a>
+                                    <a href="#contact" class="theme-btn">Book Appointment</a>
                                 </div>
                             </div>
                         </div>
@@ -245,7 +349,7 @@
                                         Convenient Location: Located in RT Nagar, Bangalore, our clinic is easily accessible, making it convenient for residents of the area to access our services.<br><br>
                                         
                                         When it comes to choosing the best skin care clinic in Bangalore, Body Care and Craft is the name you can trust. Say goodbye to skin concerns and hello to a more confident you. Schedule your consultation today and embark on your journey to radiant, flawless skin.</p>
-                                <a href="#" class="theme-btn">make appointment</a>
+                                <a href="#contact" class="theme-btn">make appointment</a>
                             </div>
                         </div>
                     </div>
@@ -611,7 +715,7 @@
                                                 <input type="text" placeholder="Your Location" id="Location">
                                              </div>
                                             <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
-                                                <input type="text" placeholder="Your Time" id="time" >
+                                                <input type="time" placeholder="Your Time" id="time" >
                                             </div>
                                             <div class="col-xl-12">
                                                 <textarea name="Special request" cols="30" rows="10"
@@ -647,6 +751,28 @@
                     </div>
                 </div>
             </section>
+
+            <div class="overlay" id="popup">
+                    <div class="popup-content">
+                        <div class="left-half">
+                            <h2>Contact Us</h2>
+                            <form id="contact-form">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" required></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div class="right-half">
+                            <h2>Get 10% Off</h2>
+                            <p>Visit our Skin Clinic today and get a 10% discount on your first appointment!</p>
+                        </div>
+                        <button id="close-popup">Close</button>
+                    </div>
+                </div>
             <!-- Subscribe Area End -->
         </main>
         <!-- Main Area End -->
@@ -724,8 +850,23 @@
         </footer>
         <!-- Footer Area End -->
 
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+    var popup = document.getElementById("popup");
+    var closeBtn = document.getElementById("close-popup");
 
+    // Show the popup on page load
+    popup.style.display = "flex";
 
+    // Close the popup when the close button is clicked
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+});
+
+</script>
+       
+        
 
 		<!-- JS here -->
         <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -744,5 +885,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
+
+
     </body>
 </html>
