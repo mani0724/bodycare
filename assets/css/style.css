@@ -4158,7 +4158,7 @@ ul.cat li a:hover {
 /*----------------------------------------*/
 .subscribe-area {
   position: relative;
-  background: url("../img/subscribe-bg.png") no-repeat center center/cover; }
+  background: url("../img/offers/send.jpg") no-repeat center center/cover; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .subscribe-area {
       top: 0; } }
