@@ -24,110 +24,7 @@
         <link rel="stylesheet" href="assets/css/default.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
-    <style>
-        /* Styles for overlay */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Styles for the popup content */
-.popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Animation for the popup */
-.popup-content {
-    animation: pop-up 0.5s ease-in-out;
-}
-
-@keyframes pop-up {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Close button style */
-#close-popup {
-    background: #ff5722;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#close-popup:hover {
-    background: #e64a19;
-}
-
-/* Styles for left and right halves */
-.left-half, .right-half {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Contact form styles */
-#contact-form {
-    text-align: left;
-}
-
-#contact-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact-form button {
-    background: #ff5722;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contact-form button:hover {
-    background: #e64a19;
-}
-@media screen and (max-width: 768px) {
-    .popup-content {
-        flex-direction: column;
-    }
-    .contact-form, .offer {
-        border-radius: 10px;
-    }
-}
-
-
-    </style>
+    
     </head>
     <body>
 
@@ -752,27 +649,6 @@
                 </div>
             </section>
 
-            <div class="overlay" id="popup">
-                    <div class="popup-content">
-                        <div class="left-half">
-                            <h2>Contact Us</h2>
-                            <form id="contact-form">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                                <label for="message">Message:</label>
-                                <textarea id="message" name="message" required></textarea>
-                                <button type="submit">Submit</button>
-                            </form>
-                        </div>
-                        <div class="right-half">
-                            <h2>Get 10% Off</h2>
-                            <p>Visit our Skin Clinic today and get a 10% discount on your first appointment!</p>
-                        </div>
-                        <button id="close-popup">Close</button>
-                    </div>
-                </div>
             <!-- Subscribe Area End -->
         </main>
         <!-- Main Area End -->
@@ -850,21 +726,7 @@
         </footer>
         <!-- Footer Area End -->
 
-<script>
-     document.addEventListener("DOMContentLoaded", function () {
-    var popup = document.getElementById("popup");
-    var closeBtn = document.getElementById("close-popup");
 
-    // Show the popup on page load
-    popup.style.display = "flex";
-
-    // Close the popup when the close button is clicked
-    closeBtn.addEventListener("click", function () {
-        popup.style.display = "none";
-    });
-});
-
-</script>
        
         
 
